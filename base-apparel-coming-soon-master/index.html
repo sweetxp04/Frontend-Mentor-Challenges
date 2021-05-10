@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="style.css">
     <title>Base Apparel Coming Soon</title>
 </head>
@@ -21,9 +22,9 @@
             <p>Hello fellow shoppers! We're currently building our new fashion store. 
                  Add your email below to stay up-to-date with announcements and our launch deals.
             </p>
-            <form">
+            <form class="error">
                 <input type="email" name="email" id="email" placeholder="Email Address">
-                <img id="error" src="./images/icon-error.svg" alt="error">
+                <img class="error-icon" src="./images/icon-error.svg" alt="error">
                 <button><img src="./images/icon-arrow.svg" alt="arrow"></button>
                 <small>Please provide a valied email.</small>
             </form>
@@ -31,6 +32,6 @@
         <div class="right bg-image">
         </div>
     </div>
-    
+    <script src="app.js"></script>
 </body>
 </html>
