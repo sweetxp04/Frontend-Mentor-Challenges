@@ -22,12 +22,18 @@ body {
 .logo {
   margin-bottom: 100px;
 }
+.bg-mobile {
+  display: none;
+}
 h1 {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 15px;
   color: #413839;
+  transform: translateX(-100%);
+  animation: comingleft 0.5s ease forwards;
 }
+
 h1 span {
   color: hsl(0, 36%, 70%);
   font-weight: 300;
@@ -39,9 +45,14 @@ p {
   margin: 15px 0;
   width: 80%;
   line-height: 1.5rem;
+  transform: translateX(100%);
+  animation: comingright 0.5s ease forwards;
 }
+
 form {
   position: relative;
+  transform: translateX(-100%);
+  animation: comingleft 0.5s ease forwards;
 }
 input {
   background-color: transparent;
@@ -77,6 +88,11 @@ button {
   top: 0;
   right: 15%;
   height: 55px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: tomato;
 }
 small {
   color: hsl(0, 93%, 68%);
@@ -93,4 +109,47 @@ form.error .error-icon {
 }
 form.error small {
   display: block;
+}
+/* Animations */
+@keyframes comingleft {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes comingright {
+  to {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 678px) {
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100%;
+    padding: 5% 10%;
+  }
+  .bg-mobile {
+    display: block;
+    margin-left: -15%;
+    width: 150%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  p {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    right: 0%;
+  }
+  .error-icon {
+    right: 100px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 }
